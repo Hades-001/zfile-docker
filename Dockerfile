@@ -3,7 +3,8 @@ ARG TAG
 
 WORKDIR /root
 
-RUN mkdir zfile && \
+RUN set -ex && \
+    mkdir zfile && \
     wget https://github.com/zhaojun1998/zfile/releases/download/${TAG}/zfile-${TAG}.war && \
     unzip zfile-${TAG}.war -d zfile && \
     rm -rf zfile-${TAG}.war && \
