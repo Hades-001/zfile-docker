@@ -15,4 +15,4 @@ ENV TZ=Asia/Shanghai
 
 EXPOSE 8080
 
-CMD /bin/bash ~/zfile/bin/start.sh
+CMD sh ./zfile/bin/start.sh && tail -f /dev/null
